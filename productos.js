@@ -156,12 +156,12 @@ const productos = {
 	visible: true,
     variantes: {
       Negro: {
-        "128 GB": { precio: 1350, true: false, cantidad: 1 },
+        "128 GB": { precio: 1350, true: true, cantidad: 1 },
         "256 GB": { precio: 1400, stock: false, cantidad: 0 },
         "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Azul: {
-        "128 GB": { precio: 1350, true: false, cantidad: 3 },
+        "128 GB": { precio: 1350, true: true, cantidad: 3 },
         "256 GB": { precio: 1400, stock: false, cantidad: 0 },
         "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
@@ -470,5 +470,6 @@ document.querySelectorAll(".producto").forEach(card => {
     precioEl.textContent = `Precio desde S/ ${precioMin}`;
   }
 });
+
 
 
