@@ -1,0 +1,533 @@
+@charset "utf-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* CURSOR */
+body {
+    cursor: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cursor-outer {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #0015Ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.cursor-inner {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #0015Ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+/* ============================= */
+/* NAVEGACIÓN */
+/* ============================= */
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 80px;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 135px;
+    padding-top: 4px;
+}
+
+.menu {
+    display: flex;
+    gap: 70px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.item img {
+    width: 30px;
+}
+
+.item a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3D3D3D;
+    min-width: 220px;
+    display: none;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+    background: #292929;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* ANIMACIÓN MENÚ */
+.nav-animada {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.nav-animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* INICIO / BANNER */
+/* ============================= */
+
+.seccion01 {
+    position: relative;
+    width: 100%;
+    background-color: #D3DFE1;
+}
+
+.imagedelinicio0 {
+    width: 100%;
+    display: block;
+}
+
+/* BOTÓN BANNER */
+.banner-boton {
+    position: absolute;
+    top: 58%;
+    left: 30%;
+    transform: translate(-50%, 200%);
+    z-index: 5;
+}
+
+.btn-catalogo {
+    padding: 14px 34px;
+    background: #25D366;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-catalogo:hover {
+    background: #1da851;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* SEPARADOR */
+/* ============================= */
+
+.seccion05 {
+    width: 100%;
+    height: 15px;
+    background-color: #4D4D54;
+}
+
+/* ============================= */
+/* quienes somos */
+/* ============================= */
+
+.quienes-somos {
+    background: #f5f6f7;
+    padding: 80px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.quienes-card {
+    background: #ffffff;
+    max-width: 900px;
+    width: 100%;
+    padding: 60px 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.quienes-card h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #000000; /* tono elegante que combina con el logo */
+    text-transform: uppercase;
+}
+
+.quienes-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.quienes-card strong {
+    color: #000;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quienes-card {
+        padding: 40px 25px;
+    }
+
+    .quienes-card h2 {
+        font-size: 28px;
+    }
+
+    .quienes-card p {
+        font-size: 16px;
+    }
+}
+
+/* ============================= */
+/* BENEFICIOS */
+/* ============================= */
+
+.beneficios {
+	background: #f7f7f7;
+	padding: 90px 8%;
+	text-align: center;
+}
+
+.beneficios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.beneficio {
+    background: #ffffff;
+    padding: 35px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-8px);
+}
+.beneficios h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000000;
+}
+
+.beneficio h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.beneficio p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ============================= */
+/* ¿POR QUÉ ELEGIRNOS? */
+/* ============================= */
+
+.elegirnos {
+    padding: 90px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.elegirnos h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+.elegirnos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.elegir-item {
+    background: #f7f7f7;
+    padding: 40px 25px;
+    border-radius: 22px;
+    transition: transform 0.3s ease;
+}
+
+.elegir-item:hover {
+    transform: translateY(-8px);
+}
+
+.elegir-item h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.elegir-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ICONOS */
+.icono {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+    background: #000;
+    color: #ffffff;
+    padding: 70px 40px 30px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+.footer-texto {
+    line-height: 1.6;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer ul li a:visited {
+    color: #ffffff;
+}
+
+.footer ul li a:hover {
+    color: #25D366; /* verde suave al pasar el mouse */
+    text-decoration: underline;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+	margin-bottom: 12px;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 14px;
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+/* ============================= */
+/* LOADER */
+/* ============================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.footer-contenido .footer-col .guia {
+	text-decoration: none;
+
+
+}
+
+
+.loader-content img {
+    width: 120px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loader-content p {
+    margin-top: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ============================= */
+/* Movimiento de nav */
+/* ============================= */
+
+#inicio {
+	scroll-margin-top: 90px;
+}
+
+#quienes {
+	scroll-margin-top: 100px;
+}
+
+#beneficios {
+	scroll-margin-top: 120px;
+}
+
+#elegirnos {
+	scroll-margin-top: 120px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+    .beneficios-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elegirnos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        gap: 30px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .banner-boton {
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .beneficios-contenedor,
+    .elegirnos-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}

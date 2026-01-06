@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="icon" href="../../imagenes/faviconblanco.png" type="image/png">
+<meta charset="utf-8">
+<title>Iphoriginal</title>
+<link rel="stylesheet" href="../estilloscatalogo.css">
+<link href="../estilloscatalogo.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-content">
+        <img src="../../imagenes/Iphoriginal vervion blanco.png" alt="Logo ITG">
+        <p>Cargando Iphoriginal...</p>
+    </div>
+</div>
+	
+<main class="contenedor" data-producto="iphone13promax">
+
+    <nav class="navegacion nav-animada">
+        <img class="logo" src="../../imagenes/Iphoriginal vervion blanco.png" alt="Logo">
+
+        <div class="menu">
+
+            <!-- HOME CON PESTAÑA -->
+            <div class="item dropdown">
+              <img src="../../imagenes/Inicio pwiphone.png" alt="">
+                <a href="../../index.html" class="btn-home">Home ▾</a>
+
+                <div class="dropdown-menu">
+                    <a href="../../index.html#inicio">Inicio</a>
+					<a href="../../index.html#quienes">¿Quiénes somos?</a>
+                    <a href="../../index.html#beneficios">Beneficios</a>
+                    <a href="../../index.html#elegirnos">¿Por qué elegirnos?</a>
+                </div>
+            </div>
+            
+        <div class="item dropdown">
+          <img src="../../imagenes/catalogo owiphone.png" alt="">
+            <a href="../../catalogo.html">Catálogo</a>
+        </div>
+
+
+<div class="item dropdown">
+    <img src="../../imagenes/contactanos pwiphone.png" alt="">
+    <a href="../../contacto.html">Contáctanos</a>
+</div>
+
+
+        </div>
+    </nav>
+
+<section class="producto-detalle">
+
+    <!-- GALERÍA -->
+    <div class="producto-img">
+        <img id="imagenPrincipal" src="../../imagenescatalogo/iphone13promax/negro.png" alt="iPhone 13 Pro Max">
+    </div>
+
+    <!-- INFO -->
+    <div class="producto-info">
+
+           <h1>Apple iPhone 13 Pro Max</h1>
+           <p class="estado">Estado: Excelente</p>
+           <p class="precio" id="precioProducto">S/ ----</p>
+           <p class="estado" id="estadoStock">Estado: --</p>
+           <p class="bateria">Batería: desde 85%</p>
+
+        <!-- COLOR -->
+        <div class="opcion">
+            <p class="opcion-titulo">
+                Color: <strong id="colorSeleccionado">Negro</strong>
+            </p>
+
+            <div class="colores">
+                <img src="../../imagenescatalogo/iphone13promax/negro.png" class="color activo"
+                     data-color="Negro">
+                <img src="../../imagenescatalogo/iphone13promax/azul.png" class="color"
+                     data-color="Azul">
+                <img src="../../imagenescatalogo/iphone13promax/dorado.png" class="color"
+                     data-color="Dorado">
+                <img src="../../imagenescatalogo/iphone13promax/verde.png" class="color"
+                     data-color="Verde">
+            </div>
+        </div>
+
+        <!-- MEMORIA -->
+        <div class="opcion">
+            <p class="opcion-titulo">
+                Memoria interna: <strong id="memoriaSeleccionada">128 GB</strong>
+            </p>
+
+            <div class="memoria">
+                <button class="mem activo" data-memoria="128 GB">128 GB</button>
+                <button class="mem" data-memoria="256 GB">256 GB</button>
+                <button class="mem" data-memoria="512 GB">512 GB</button>
+            </div>
+        </div>
+
+        <!-- CANTIDAD -->
+<div class="opcion">
+    <p class="opcion-titulo">
+        Disponibles: <strong id="cantidadDisponible">—</strong>
+    </p>
+</div>
+
+        <!-- BOTÓN -->
+        <a id="btnWhatsapp" target="_blank" class="btn-whatsapp">
+            Preguntar por WhatsApp
+        </a>
+
+        <a href="../../catalogo.html" class="btn-volver">← Volver al catálogo</a>
+
+    </div>
+</section>
+
+	<footer id="contactanos" class="footer">
+
+    <div class="footer-contenido">
+
+        <!-- MARCA -->
+        <div class="footer-col">
+            <img src="../../imagenes/Iphoriginal vervion blanco.png" alt="IPHOriginal" class="footer-logo">
+            <p class="footer-texto">
+                Venta de iPhones renovados, importados directamente,
+                con precios justos y atención confiable.
+            </p>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../../catalogo.html">Catálogo</a></li>
+                <li><a href="../../contacto.html">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-col">
+            <h4>Contáctanos</h4>
+            <ul>
+                <li>📱 WhatsApp: +51 973 390 126</li>
+                <li>✉️ iphoriginal.oficial@gmail.com</li>
+                <li>📍 Lima, Perú</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 IPHOriginal — Todos los derechos reservados</p>
+    </div>
+
+</footer>
+
+</main>
+
+<!-- Cursor -->
+<div class="cursor-outer"></div>
+<div class="cursor-inner"></div>
+
+<script>
+const cursorOuter = document.querySelector(".cursor-outer");
+const cursorInner = document.querySelector(".cursor-inner");
+
+let mouseX = 0, mouseY = 0;
+let outerX = 0, outerY = 0;
+let innerX = 0, innerY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateCursor() {
+    outerX += (mouseX - outerX) * 0.12;
+    outerY += (mouseY - outerY) * 0.12;
+
+    innerX += (mouseX - innerX) * 0.25;
+    innerY += (mouseY - innerY) * 0.25;
+
+    cursorOuter.style.left = outerX + "px";
+    cursorOuter.style.top = outerY + "px";
+
+    cursorInner.style.left = innerX + "px";
+    cursorInner.style.top = innerY + "px";
+
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+</script>
+<script>
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const nav = document.querySelector(".nav-animada");
+
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        nav.classList.add("visible");
+    }, 1200);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const track = document.querySelector(".slider-track");
+if (!track) return;
+
+/* ELEMENTOS */
+const slides = Array.from(track.children); // incluye fantasmas
+const dots = document.querySelectorAll(".dot");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+const visible = 3;
+const slideWidth = 100 / visible;
+
+/*
+0 = ghost
+1 = Material Publicitario
+2 = Papelería
+3 = Merchandising
+4 = Empaques
+5 = Gran Formato
+6 = ghost
+*/
+const firstReal = 1;
+const lastReal  = slides.length - 2;
+const lastCenter = lastReal + 1; // 🔑 CLAVE
+
+let index = firstReal;
+let autoTimer;
+
+/* POSICIÓN INICIAL */
+track.style.transition = "none";
+track.style.transform = `translateX(0%)`;
+updateUI();
+startAuto();
+
+/* UI */
+function updateUI() {
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+
+    if (slides[index]) {
+        slides[index].classList.add("active");
+    }
+
+    const dotIndex = Math.min(Math.max(index - 1, 0), dots.length - 1);
+    if (dots[dotIndex]) {
+        dots[dotIndex].classList.add("active");
+    }
+}
+
+/* MOVER */
+function moveTo(i) {
+    clearInterval(autoTimer);
+    index = i;
+
+    const offset = (index - firstReal) * slideWidth;
+
+    track.style.transition = "transform 0.8s ease";
+    track.style.transform = `translateX(-${offset}%)`;
+
+    updateUI();
+    startAuto();
+}
+
+/* AUTOPLAY */
+function startAuto() {
+    autoTimer = setInterval(() => {
+        if (index < lastCenter) {
+            moveTo(index + 1);
+        } else {
+            resetToStart();
+        }
+    }, 5000);
+}
+
+/* RESET SUAVE */
+function resetToStart() {
+    clearInterval(autoTimer);
+
+    track.style.transition = "none";
+    index = firstReal;
+    track.style.transform = `translateX(0%)`;
+
+    requestAnimationFrame(() => {
+        track.style.transition = "transform 0.8s ease";
+    });
+
+    updateUI();
+    startAuto();
+}
+
+/* EVENTOS */
+next.addEventListener("click", () => {
+    if (index < lastCenter) {
+        moveTo(index + 1);
+    }
+});
+
+prev.addEventListener("click", () => {
+    if (index > firstReal) {
+        moveTo(index - 1);
+    }
+});
+
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        moveTo(i + firstReal);
+    });
+});
+
+});
+</script>
+<script src="../../productos.js"></script>
+<script src="../../producto.js"></script>
+
+
+</body>
+
+</html>
