@@ -156,29 +156,29 @@ const productos = {
 	visible: true,
     variantes: {
       Negro: {
-        "128 GB": { precio: 14, stock: false, cantidad: 0 },
-        "256 GB": { precio: 1899, stock: false, cantidad: 0 },
-        "512 GB": { precio: 2099, stock: false, cantidad: 0 },
+        "128 GB": { precio: 1350, stock: false, cantidad: 0 },
+        "256 GB": { precio: 1400, stock: false, cantidad: 0 },
+        "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Azul: {
-        "128 GB": { precio: 1699, stock: false, cantidad: 0 },
-        "256 GB": { precio: 1899, stock: false, cantidad: 0 },
-        "512 GB": { precio: 2099, stock: false, cantidad: 0 },
+        "128 GB": { precio: 1350, stock: false, cantidad: 0 },
+        "256 GB": { precio: 1400, stock: false, cantidad: 0 },
+        "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Blanco: {
-        "128 GB": { precio: 1699, stock: false, cantidad: 0 },
-        "256 GB": { precio: 1899, stock: false, cantidad: 0 },
-        "512 GB": { precio: 2099, stock: false, cantidad: 0 },
+        "128 GB": { precio: 1350, stock: false, cantidad: 0 },
+        "256 GB": { precio: 1400, stock: false, cantidad: 0 },
+        "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Rosa: {
-        "128 GB": { precio: 1699, stock: false, cantidad: 0 },
-        "256 GB": { precio: 1899, stock: false, cantidad: 0 },
-        "512 GB": { precio: 2099, stock: false, cantidad: 0 },
+        "128 GB": { precio: 1350, stock: false, cantidad: 0 },
+        "256 GB": { precio: 1400, stock: false, cantidad: 0 },
+        "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Verde: {
-        "128 GB": { precio: 1699, stock: false, cantidad: 0 },
-        "256 GB": { precio: 1899, stock: false, cantidad: 0 },
-        "512 GB": { precio: 2099, stock: false, cantidad: 0 },
+        "128 GB": { precio: 1350, stock: false, cantidad: 0 },
+        "256 GB": { precio: 1400, stock: false, cantidad: 0 },
+        "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
     }
   },
@@ -470,3 +470,4 @@ document.querySelectorAll(".producto").forEach(card => {
     precioEl.textContent = `Precio desde S/ ${precioMin}`;
   }
 });
+
