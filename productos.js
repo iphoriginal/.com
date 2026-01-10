@@ -161,7 +161,7 @@ const productos = {
         "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
       Azul: {
-        "128 GB": { precio: 1350, stock: true, cantidad: 3 },
+        "128 GB": { precio: 1350, stock: true, cantidad: 2 },
         "256 GB": { precio: 1400, stock: false, cantidad: 0 },
         "512 GB": { precio: 1450, stock: false, cantidad: 0 },
       },
@@ -470,6 +470,7 @@ document.querySelectorAll(".producto").forEach(card => {
     precioEl.textContent = `Precio desde S/ ${precioMin}`;
   }
 });
+
 
 
 
